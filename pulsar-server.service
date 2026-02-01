@@ -1,0 +1,13 @@
+[Unit]
+Description=Pulsar Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/pulsar/pulsar-server/build/bin/pulsar-server
+WorkingDirectory=/pulsar/pulsar-server/build/bin
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
