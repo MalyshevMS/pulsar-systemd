@@ -1,11 +1,11 @@
 [Unit]
-Description=Pulsar Proxy
+Description=Pulsar File Manager
 After=network.target
 
 [Service]
 Type=simple
 WorkingDirectory=/pulsar/pulsar-file
-ExecStart=/usr/bin/node /pulsar/pulsar-file/proxy.js
+ExecStart=/usr/bin/node /pulsar/pulsar-file/server.js
 Restart=on-failure
 Environment=NODE_ENV=production
 
